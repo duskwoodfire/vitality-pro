@@ -216,10 +216,10 @@ export default function Home() {
                   <Mail className="h-4 w-4" />
                   <span>support@vitality.com</span>
                 </div>
-                {/* <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
-                  <span>Kolkata, City, State</span>
-                </div> */}
+                  <span>Techno India University,West Bengal,India</span>
+                </div>
               </div>
             </div>
           </div>
