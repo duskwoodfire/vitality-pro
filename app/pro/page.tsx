@@ -134,8 +134,8 @@ export default function ProPage() {
           <h3 className="text-xl font-semibold mb-2 text-blue-900">
             Contact Us
           </h3>
-          <p className="mb-1 text-black">Phone: +91-9876543210</p>
-          <p className="mb-1 text-black">Email: support@vitalityhealth.in</p>
+          <p className="mb-1 text-black">Phone: +91-8777391047</p>
+          <p className="mb-1 text-black">Email: team2025vitality@gmail.com</p>
           <p className="text-black">
             Address: Techno India University,West Bengal,India
           </p>
