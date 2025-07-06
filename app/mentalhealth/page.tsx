@@ -23,42 +23,42 @@ export default function MentalHealth() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto my-10">
-        <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition text-center border border-white/20">
-          <h2 className="text-2xl font-semibold text-[#0b3954] mb-3">Burnout Checker</h2>
-          <p className="text-gray-700 mb-4">Feeling drained or mentally exhausted? Take a quick self-assessment.</p>
-          <Link href="/mentalhealth/burnout">
-            <button className="px-4 py-2 bg-[#0b3954] text-white rounded-full hover:bg-[#12617c] transition">
-              Start
-            </button>
-          </Link>
-        </div>
-
-        <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition text-center border border-white/20">
-          <h2 className="text-2xl font-semibold text-[#0b3954] mb-3">Depression Checker</h2>
-          <p className="text-gray-700 mb-4">Identify early signs of depression with our guided symptom checker.</p>
-          <Link href="/mentalhealth/depression">
-            <button className="px-4 py-2 bg-[#0b3954] text-white rounded-full hover:bg-[#12617c] transition">
-              Start
-            </button>
-          </Link>
-        </div>
-
-        <div className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition text-center border border-white/20">
-          <h2 className="text-2xl font-semibold text-[#0b3954] mb-3">Anxiety Checker</h2>
-          <p className="text-gray-700 mb-4">Assess your anxiety symptoms and receive supportive insights.</p>
-          <Link href="/mentalhealth/anxiety">
-            <button className="px-4 py-2 bg-[#0b3954] text-white rounded-full hover:bg-[#12617c] transition">
-              Start
-            </button>
-          </Link>
-        </div>
+        {[
+          {
+            title: 'Burnout Checker',
+            desc: 'Feeling drained or mentally exhausted? Take a quick self-assessment.',
+            href: '/mentalhealth/burnout',
+          },
+          {
+            title: 'Depression Checker',
+            desc: 'Identify early signs of depression with our guided symptom checker.',
+            href: '/mentalhealth/depression',
+          },
+          {
+            title: 'Anxiety Checker',
+            desc: 'Assess your anxiety symptoms and receive supportive insights.',
+            href: '/mentalhealth/anxiety',
+          },
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="p-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-md hover:shadow-xl transition text-center border border-white/20"
+          >
+            <h2 className="text-2xl font-semibold text-[#0b3954] mb-3">{item.title}</h2>
+            <p className="text-gray-700 mb-4">{item.desc}</p>
+            <Link href={item.href}>
+              <button className="px-4 py-2 bg-[#0b3954] text-white rounded-full hover:bg-[#12617c] transition">
+                Start
+              </button>
+            </Link>
+          </div>
+        ))}
       </div>
 
       <p className="text-sm text-center text-gray-600 mt-10">
         Note: The AI assistant is not a replacement for professional help. For severe or urgent concerns, please reach out to a certified mental health professional.
       </p>
 
-      {/* Emergency Support Section */}
       <div className="max-w-4xl mx-auto mt-16 text-center">
         <h2 className="text-2xl font-bold text-[#084c61] mb-4">Emergency Mental Health Support – India</h2>
         <p className="text-gray-700 mb-2">If you or someone you know is in crisis or needs immediate help, please reach out to the following helplines:</p>
@@ -84,11 +84,11 @@ export default function MentalHealth() {
               intent="WELCOME"
               chat-title="vitalitybot"
               agent-id="8aa5c668-069b-4ec7-9899-4112302c97b4"
-              language-code="en"
-            ></df-messenger>
+              language-code="en">
+            </df-messenger>
           `,
         }}
-      ></div>
+      />
     </div>
   );
 }
