@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
@@ -108,7 +108,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-black">
@@ -145,7 +145,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-black">
                 <li><Link href="/consult" >Consultations</Link></li>
-                <li><Link href="/shop" >Health Products</Link></li>
+                <li><Link href="/shop" >Shop</Link></li>
                 <li><Link href="/track" >Health Tracking</Link></li>
               </ul>
             </div>
@@ -162,21 +162,21 @@ export default function Home() {
               <div className="space-y-2 text-black">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 8777391047</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
                   <span>support@vitality.com</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
-                  <span>123 Healthcare Ave, City, State</span>
-                </div>
+                  <span>Kolkata, City, State</span>
+                </div> */}
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-black">
-            <p>&copy; 2024 Vitality Healthcare. All rights reserved.</p>
+            <p>&copy; 2025 Vitality Healthcare. All rights reserved.</p>
           </div>
         </div>
       </footer>
