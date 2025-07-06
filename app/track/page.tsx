@@ -39,6 +39,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/navbar";
+import Link from "next/link";
 
 interface HealthData {
   id: string;
@@ -498,6 +499,38 @@ export default function Track() {
               )}
             </CardContent>
           </Card>
+
+          {/* Track Main Page Links */}
+          <div className="mt-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+              Explore More
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/track/diagnosis">
+                <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center border border-gray-100 hover:border-blue-400 cursor-pointer">
+                  <span className="text-3xl mb-2">🩺</span>
+                  <span className="text-lg font-semibold text-gray-900">
+                    Disease Risk Self-Assessment
+                  </span>
+                  <p className="text-center text-gray-500 text-sm mt-2">
+                    Evaluate your risk for common diseases based on your health
+                    data.
+                  </p>
+                </div>
+              </Link>
+              <Link href="/track/mentalhealth">
+                <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center border border-gray-100 hover:border-blue-400 cursor-pointer">
+                  <span className="text-3xl mb-2">🧠</span>
+                  <span className="text-lg font-semibold text-gray-900">
+                    Mental Health Check
+                  </span>
+                  <p className="text-center text-gray-500 text-sm mt-2">
+                    Monitor your mental well-being and track changes over time.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

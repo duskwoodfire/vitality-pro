@@ -1,29 +1,50 @@
-import Link from 'next/link';
-import { ArrowRight, Shield, Users, Zap, Phone, Mail, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
-import Navbar from '@/components/navbar';
+import Link from "next/link";
+import {
+  ArrowRight,
+  Shield,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-16 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className=" mt-10 text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent">
               Welcome to
-              <span className="block bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent">Our Healthcare Platform</span>
+              <span className="block bg-gradient-to-r from-gray-900 via-gray-800 to-black bg-clip-text text-transparent">
+                Our Healthcare Platform
+              </span>
             </h1>
             <p className=" mt-3 text-xl text-gray-800 mb-8 max-w-3xl mx-auto">
-              Your one-stop solution for health and wellness. Experience personalized care, expert consultations, and cutting-edge health tracking.
+              Your one-stop solution for health and wellness. Experience
+              personalized care, expert consultations, and cutting-edge health
+              tracking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/consult">
-                <Button size="lg" className="bg-gradient-to-r from-gray-900 via-gray-800 to-black hover:from-gray-800 hover:via-gray-700 hover:to-gray-900">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-gray-900 via-gray-800 to-black hover:from-gray-800 hover:via-gray-700 hover:to-gray-900"
+                >
                   Book a Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -49,7 +70,7 @@ export default function Home() {
               Comprehensive healthcare solutions designed for your well-being
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -58,7 +79,8 @@ export default function Home() {
                 </div>
                 <CardTitle>Health Products</CardTitle>
                 <CardDescription>
-                  Premium health supplements and wellness products carefully curated for your needs
+                  Premium health supplements and wellness products carefully
+                  curated for your needs
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -70,7 +92,8 @@ export default function Home() {
                 </div>
                 <CardTitle>Expert Consultations</CardTitle>
                 <CardDescription>
-                  Connect with qualified healthcare professionals for personalized medical advice
+                  Connect with qualified healthcare professionals for
+                  personalized medical advice
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -82,7 +105,8 @@ export default function Home() {
                 </div>
                 <CardTitle>Health Tracking</CardTitle>
                 <CardDescription>
-                  Monitor your vital signs and health metrics with our advanced tracking system
+                  Monitor your vital signs and health metrics with our advanced
+                  tracking system
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -117,14 +141,26 @@ export default function Home() {
             Ready to Take Control of Your Health?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of satisfied patients who trust Vitality for their healthcare needs
+            Join thousands of satisfied patients who trust Vitality for their
+            healthcare needs
           </p>
-          <Link href="/consult">
-            <Button size="lg" variant="secondary">
-              Get Started Today
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/consult">
+              <Button size="lg" variant="secondary">
+                Get Started Today
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <a
+              href="https://www.practo.com/consult"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-lg"
+            >
+              Book via Practo
+               <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -134,7 +170,13 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-10">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-               <Image src="/images/V.png" alt="Logo" width={40} height={40} className='rounded-full' />
+                <Image
+                  src="/images/V.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
                 <span className="text-xl font-bold">Vitality</span>
               </div>
               <p className="text-black">
@@ -144,9 +186,15 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-black">
-                <li><Link href="/consult" >Consultations</Link></li>
-                <li><Link href="/shop" >Shop</Link></li>
-                <li><Link href="/track" >Health Tracking</Link></li>
+                <li>
+                  <Link href="/consult">Consultations</Link>
+                </li>
+                <li>
+                  <Link href="/shop">Shop</Link>
+                </li>
+                <li>
+                  <Link href="/track">Health Tracking</Link>
+                </li>
               </ul>
             </div>
             {/* <div>

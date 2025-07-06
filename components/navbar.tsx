@@ -22,7 +22,8 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/shop", label: "Shop" },
     { href: "/consult", label: "Consult" },
-    { href: "/track", label: "Track" },
+    { href: "/track", label: "Health Track" },
+    { href: "/pro", label: "Membership" },
   ];
 
   const cartItemCount = Array.isArray(items)
