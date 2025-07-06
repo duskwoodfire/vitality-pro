@@ -24,13 +24,14 @@ export const ConsultationConfirmation = ({
     <Preview>Your consultation has been booked successfully</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Consultation Booked Successfully</Heading>
+        <Heading style={h1}>New Consultation Booking </Heading>
         <Text style={text}>
           Dear {consultation.firstName} {consultation.lastName},
         </Text>
         <Text style={text}>
-          Thank you for booking a consultation with us. We have received your
-          request and will contact you within 24 hours to confirm your appointment.
+         You have received a new consultation booking!
+         <br />
+         Please Check the details bellow:
         </Text>
         
         <Section style={section}>
@@ -54,18 +55,6 @@ export const ConsultationConfirmation = ({
             <strong>Contact Number:</strong> {consultation.phone}
           </Text>
         </Section>
-
-        <Hr style={hr} />
-        
-        <Text style={text}>
-          If you have any questions or need to make changes to your appointment,
-          please contact us at your earliest convenience.
-        </Text>
-        
-        <Text style={text}>
-          Best regards,<br />
-          Healthcare Team
-        </Text>
       </Container>
     </Body>
   </Html>
